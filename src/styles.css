@@ -1,0 +1,293 @@
+/*
+
+  Josh's Custom CSS Reset
+
+  https://www.joshwcomeau.com/css/custom-css-reset/
+
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+body {
+  background-color: #93b7be;
+  position: relative;
+  height: 100dvh;
+  gap: 2%;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  margin-top: 20px;
+}
+#navbar {
+  display: flex;
+  padding: 1.5%;
+  justify-content: space-between;
+  height: 15%;
+  background-color: antiquewhite;
+}
+#listFilters {
+  display: flex;
+  row-gap: 10px;
+  min-width: max-content;
+  flex-direction: column;
+  align-items: center;
+}
+#filters {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  column-gap: 20px;
+}
+#newList {
+  align-items: center;
+  display: flex;
+  margin-bottom: 30px;
+  column-gap: 20px;
+}
+#navbar .button {
+  background-color: white;
+  padding: 3%;
+  border-radius: 15px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+#container {
+  display: flex;
+  padding: 3%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  background-color: #93b7be;
+  min-height: 80dvh;
+  column-gap: 30px;
+}
+.blur {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+#listForm {
+  background-color: #93b7be;
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  left: 25%;
+  border-radius: 20px;
+  height: 30dvh;
+  width: 50dvw;
+}
+#listForm h2 {
+  margin-top: 4%;
+}
+#listForm > form {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  gap: 5%;
+  width: 100%;
+  position: relative;
+}
+#listForm button {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  bottom: 10%;
+  right: 40%;
+}
+#taskForm,
+#updateTask {
+  position: absolute;
+  top: 22%;
+  left: 25%;
+  display: none;
+  border-radius: 20px;
+  background-color: #93b7be;
+  height: 50dvh;
+  width: 50dvw;
+}
+#updateTask {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 2%;
+}
+#updateTask button {
+  width: 50%;
+  place-self: center;
+}
+#taskForm > form,
+#updateTask > form {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  gap: 5%;
+  width: 100%;
+  position: relative;
+}
+form * {
+  border-radius: 10px;
+}
+form > div {
+  display: flex;
+  min-height: 40%;
+  justify-content: space-between;
+}
+form > div > span {
+  display: flex;
+  flex-direction: column;
+}
+#taskForm form button {
+  position: absolute;
+  width: 20%;
+  height: 13%;
+  bottom: 10%;
+  right: 40%;
+}
+select,
+#date {
+  height: 60px;
+}
+#taskName {
+  height: 40px;
+}
+#navbar > span {
+  display: flex;
+}
+.list {
+  row-gap: 10px;
+  display: flex;
+  min-width: 400px;
+  padding: 1%;
+  overflow: scroll;
+  color: wheat;
+  background-color: #294936;
+  align-items: center;
+  border-radius: 20px;
+  min-height: 80%;
+  flex-direction: column;
+}
+.add {
+  width: 50%;
+  display: flex;
+  padding: 1%;
+  justify-content: space-between;
+}
+.sButton {
+  border-radius: 50%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #93b7be;
+  width: 30px;
+}
+.title {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 80%;
+}
+.summ {
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5%;
+}
+.det {
+  display: none;
+  text-align: center;
+  gap: 5%;
+  justify-content: space-between;
+  padding: 2%;
+  margin: 0 10px;
+  background-color: inherit;
+}
+.buttons {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  row-gap: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+.buttons button {
+  width: 80%;
+  color: white;
+  background-color: #d5c7bc;
+  height: 50%;
+  border-radius: 6px;
+  border: none;
+}
+.buttons button:nth-child(1) {
+  background-color: red;
+}
+.buttons button:nth-child(2) {
+  background-color: turquoise;
+}
+.task {
+  background-color: #f1fffa;
+  display: flex;
+  flex-direction: column;
+  color: #17255a;
+  gap: 20px;
+  padding: 3%;
+  border: 3px solid;
+  border-radius: 14px;
+  width: 95%;
+}
+.task h2 {
+  font-size: 0.8rem;
+}

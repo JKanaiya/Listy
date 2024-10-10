@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="navbar">
+      <h1>LISTY</h1>
+      <div id="listFilters">
+        <h2>Filters</h2>
+        <div id="filters">
+          <div class="button" id="incomplete">Incomplete</div>
+          <div class="button" id="today">Today</div>
+          <div class="button" id="tomorrow">Tomorrow</div>
+          <div class="button" id="thisWeek">Week</div>
+          <div class="button" id="completed">Completed</div>
+        </div>
+      </div>
+      <div id="newList">
+        <h2>New List</h2>
+        <span class="sButton" id="addList"
+          ><ion-icon name="add-outline"></ion-icon
+        ></span>
+      </div>
+    </div>
+    <div id="container"></div>
+    <div id="taskForm">
+      <form name="taskForm" id="formTask">
+        <input
+          type="text"
+          placeholder="name of task"
+          id="taskName"
+          name="taskName"
+        />
+        <textarea
+          name="taskDescription"
+          id="taskDescription"
+          placeholder="description"
+        ></textarea>
+        <div>
+          <span>
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" />
+          </span>
+          <span>
+            <label for="priority">Task Priority</label>
+            <select name="priority" id="priority">
+              <option value="High">High</option>
+              <option value="Mid">Mid</option>
+              <option value="Low">Low</option>
+            </select>
+          </span>
+        </div>
+        <button type="submit">Done</button>
+      </form>
+    </div>
+    <div id="listForm">
+      <h2>Name of the List</h2>
+      <form name="listForm" id="formList">
+        <input
+          type="text"
+          id="listName"
+          placeholder="name of List"
+          name="listName"
+        />
+        <button type="submit">Done</button>
+      </form>
+    </div>
+    <div id="updateTask">
+      <h2>Update</h2>
+      <form name="updateForm" id="formUpdate">
+        <input type="text" placeholder="" id="updateTName" name="taskName" />
+        <textarea
+          name="taskDescription"
+          id="uTaskDescription"
+          placeholder=""
+        ></textarea>
+        <div>
+          <span>
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="uDate" />
+          </span>
+          <span>
+            <label for="priority">Task Priority</label>
+            <select name="priority" id="priority">
+              <option value="High">High</option>
+              <option value="Mid">Mid</option>
+              <option value="Low">Low</option>
+            </select>
+          </span>
+        </div>
+        <button type="submit">Done</button>
+      </form>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
