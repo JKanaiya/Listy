@@ -3,6 +3,11 @@ import { isThisWeek, isToday, isTomorrow } from "date-fns";
 import { toggleDisplayForm, populate } from "./display";
 import { initListForm } from "./publish";
 
+if (!JSON.parse(localStorage.getItem("lists"))) {
+  let lists = [];
+  lists.push("default");
+  localStorage.setItem("lists", JSON.stringify(lists));
+}
 function filterAll(task) {
   return task.completed == "false";
 }
