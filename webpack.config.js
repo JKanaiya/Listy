@@ -18,10 +18,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
-    new webpack.ContextReplacementPlugin(
-      /date-fns[/\\]locale/,
-      new RegExp(`(${locales.join("|")})\.js$`)
-    ),
   ],
   module: {
     rules: [

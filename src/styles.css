@@ -153,6 +153,7 @@ h1 {
   border-radius: 20px;
   background-color: #93b7be;
   height: 50dvh;
+  border: 5px solid #294936;
   width: 50dvw;
 }
 #updateTask {
